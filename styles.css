@@ -1,0 +1,170 @@
+/* imports and universal changes */
+
+@font-face {
+    font-family: InkFree;
+    src: url(fonts/Inkfree.ttf);
+}
+
+@font-face {
+    font-family: kg_ten_thousand_reasons;
+    src: url(fonts/KGTenThousandReasonsAlt.ttf);
+}
+
+* {
+    font-family: 'kg_ten_thousand_reasons';
+    color: #000000;
+}
+
+
+/* normal elements */
+
+b {
+    -webkit-text-stroke: 0.1px #000000;
+}
+
+
+
+h1 {
+    font-family: 'InkFree';
+    -webkit-text-stroke: 3px;
+}
+
+
+/* class */
+
+.center {
+    text-align: center;
+}
+
+.coverImage {
+    position: absolute;
+    max-height: 90%;
+    max-width: 100%;
+    transition: 2s;
+}
+
+.darkGreen {
+    background-color: #464C43;
+}
+
+.fading {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.grayImg {
+    filter:grayscale(100%);
+    transition:0.5s ease-in-out;
+}
+
+.grayImg:hover {
+    filter: grayscale(0%);
+}
+
+.index {
+    text-decoration: none;
+    color: #fff;
+}
+
+.index:hover {
+    text-decoration: underline 1px;
+    color: #fff;
+}
+
+.lightGreen {
+    background-color: #D7F3CA;
+}
+
+.lineHeight {
+    line-height: 150%;
+}
+
+.linkGreen {
+    color: #464C43;
+    -webkit-text-stroke: 0.2px #464C43;
+
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    -webkit-text-stroke: 0.5px #000000;
+    -webkit-text-fill-color: #000000;
+    margin-left: 2.5vw;
+}
+
+.nav-link:hover {
+    text-decoration: underline 2px;
+    -webkit-text-stroke: 0.5px;
+}
+
+.noUL {
+    list-style-type: none;
+    font-size: 0.75em;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+}
+
+.placeholder {
+    position: absolute;
+    font-size: 8px;
+    top: 100%;
+    visibility: hidden;
+}
+
+.projects {
+    width: 80%;
+}
+
+/* id */
+
+#blackBG {
+    background-color: #000000;
+    -webkit-text-fill-color: #fff;
+}
+
+#mainImage {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* scroll up button */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 4%;
+    right: 1%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -12rem;
+    transition: 0.5s;
+  }
+
+  #scrollToTop.active {
+    margin-bottom: 0;
+  }
+
+@media screen and (hover: none) {
+    .grayImg {
+        filter: grayscale(0%);
+    }
+}
