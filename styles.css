@@ -105,6 +105,7 @@ h1 {
     -webkit-text-stroke: 0.5px #000000;
     -webkit-text-fill-color: #000000;
     margin-left: 2.5vw;
+    letter-spacing: 0;
 }
 
 .nav-link:hover {
