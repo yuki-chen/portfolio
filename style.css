@@ -1,0 +1,339 @@
+/* Universal CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #323031;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  margin-top: 64px;
+  overflow-x: hidden;
+}
+
+/* Nav Bar CSS */
+
+.transition-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#logo {
+  font-family: "Caveat", sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7F7979;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1400px;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  padding: 16px 24px; 
+  margin: 0 auto; /* Horizontally center the navigation bar */
+}
+
+.nav-link {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-button {
+  padding: 8px 12px; /* Adjust padding as needed */
+}
+
+/* Cover Art */
+
+.comic {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensure children (slide-img) stretch to full height */
+}
+
+.slide-img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 80%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Intro */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#intro {
+  display: none;
+  text-align: center;
+  padding: 24px;
+}
+
+#scroll-project {
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.gray {
+  color: #7F7979;
+}
+
+/* Work  */
+
+#work {
+  margin-top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  margin-right: 16px;
+  gap: 64px;
+  margin-bottom: 10vh;
+}
+
+.project-cover {
+  width: 85%;
+  max-width: 480px;
+  margin: 16px;
+  transition: transform 0.3s ease;
+}
+
+.project-cover:hover {
+  transform: scale(1.1); /* Example transformation, adjust as needed */
+}
+
+/* Ending */
+
+footer {
+  margin-top: 128px;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-weight: 600;
+  color: #d9d9d9;
+  margin-bottom: 16px;
+  font-size: 36px;
+}
+
+#connect {
+  width: 100%;
+  max-width: 840px;
+}
+
+.social-media {
+  margin: 16px;
+}
+
+/* Modal CSS */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal h2 {
+  font-family: "Caveat", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 16% auto;
+  padding: 24px;
+  border-radius: 8px;
+  width: 85%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  color: #7F7979;
+  float: right;
+  font-size: 32px;
+}
+
+.close:hover, .close:focus {
+  color: #323031;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0; /* Ensuring overlay is behind the modal */
+}
+
+@media screen and (orientation: portrait) {
+  .modal {
+    display: block;
+  }
+}
+
+#okBtn {
+  background-color: #323031;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#okBtn:hover {
+  background-color: #7F7979;
+}
+
+.case-cover {
+  background-color: #F5F5F5;
+  height: 48vh;
+  max-height: 360px;
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+  margin-bottom: 48px;
+}
+
+.work-logo {
+  max-width: 150px;
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  line-height: 2;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.info > *:first-child {
+  font-weight: bold;
+  color: #00C444;
+}
+
+.role {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url('../img/border-frame.png');
+}
+
+.bio {
+  margin-bottom: 64px;
+}
+
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+#protected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 128px;
+}
+
+.inputnum {
+  width: 64vw;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+#password {
+  background-color:#F5F5F5;
+  border: none;
+  height: 48px;
+  border-radius: 4px 0px 0px 4px;
+  padding: 16px;
+  font-family: "Poppin", sans-serif;
+  font-size: 16px;
+  width: 90%;
+}
+
+.check {
+  float: right;
+  width: 10%;
+  padding-right: 12px ;
+  height: 48px;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+  background-color: #F5F5F5;
+  cursor: pointer;
+}
+
+#content {
+  margin: 64px;
+  display: none;
+  text-align: center;
+}
