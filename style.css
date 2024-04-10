@@ -334,6 +334,7 @@ hr {
 
 #content {
   margin: 64px;
+  margin-bottom: 256px;
   display: none;
   text-align: center;
   text-decoration: underline;
