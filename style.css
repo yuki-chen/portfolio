@@ -336,4 +336,5 @@ hr {
   margin: 64px;
   display: none;
   text-align: center;
+  text-decoration: underline;
 }
