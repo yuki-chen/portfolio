@@ -1,3 +1,3 @@
-Deployed website: https://y-uki.github.io/final/
+Deployed website: https://yuki-chen.github.io/portfolio/
 
-Repository link: https://github.com/y-uki/final/
+Repository link: https://github.com/yuki-chen/portfolio/
