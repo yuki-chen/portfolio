@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> UberEats </title>
-  <link rel="icon" href="img/icon.png" type="image/png">
+  <link rel="icon" href="../assets/img/icon.png" type="image/png">
 
   <!--CSS-->
-  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
   <!--Poppin Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,16 @@
 <body>
   <!--Navigation-->
   <nav>
-    <a href="index.html" id="logo"> YUKI CHEN </a>
+    <a href="../index.html" id="logo"> YUKI CHEN </a>
     <div class="nav-link">
-      <a class="nav-button" href="index.html#work"> WORK </a>
-      <a class="nav-button" href="YukiChenResume.pdf" target=”_blank”> RESUME </a>
+      <a class="nav-button" href="../index.html#work"> WORK </a>
+      <a class="nav-button" href="../assets/YukiChenResume.pdf" target=”_blank”> RESUME </a>
       <a class="nav-button" href="mailto:yukic@andrew.cmu.edu"> CONTACT </a>
     </div>
   </nav>
 
   <div class="case-cover">
-    <img src="img/uberlogo.png" alt="ubereats logo" class="work-logo">
+    <img src="../assets/img/uberlogo.png" alt="ubereats logo" class="work-logo">
   </div>
 
   <div class="text">
@@ -64,11 +64,11 @@
     <hr>
 
     <div id="protected">
-        <img src="img/shopping.png" alt="shopping icons" class="inputnum">
+        <img src="../assets/img/shopping.png" alt="shopping icons" class="inputnum">
         <div id="password-form" class="inputnum">
             <input type="password" id="password" placeholder="Ask me for the password" required>
             <button class="check" onclick="checkPassword()">
-              <img src="img/right-arrow copy.png" width="24px">
+              <img src="../assets/img/right-arrow copy.png" width="24px">
             </button>
         </div>
     </div>
@@ -79,6 +79,11 @@
         <a href="https://medium.com/@yukic/revamping-post-order-ratings-experience-for-ubereats-new-verticals-orders-008550c3af44" target="_blank"> Open link here! </a>
     </div>
   </div>
+
+  <!--Scroll top button that appears halfway through the page-->
+  <button id="scroll-top-btn">
+    <img src="../assets/img/top-arrow.png" alt="scroll to top" height="24px">
+  </button>
 
   <!--Modal-->
   <div id="overlay"></div>
@@ -93,7 +98,8 @@
   </div>
 
   <!--JavaScript-->
-  <script src="script.js"> </script>
+  <script src="../javascript/script.js"> </script>
+  <script src="../javascript/project.js"> </script>
 
 </body>
 </html>
