@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Yuki Chen </title>
-  <link rel="icon" href="img/icon.png" type="image/png">
+  <link rel="icon" href="assets/img/icon.png" type="image/png">
 
   <!--CSS-->
-  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
   <!--Poppin Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!--External Animation-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
@@ -23,51 +25,61 @@
   <nav>
     <a href="index.html" id="logo"> YUKI CHEN </a>
     <div class="nav-link">
-      <a class="nav-button" onclick="scrollToProject()"> WORK </a>
-      <a class="nav-button" href="YukiChenResume.pdf" target=”_blank”> RESUME </a>
+      <p class="nav-button" onclick="scrollToProject()"> WORK </p>
+      <a class="nav-button" href="assets/YukiChenResume.pdf" target=”_blank”> RESUME </a>
       <a class="nav-button" href="mailto:yukic@andrew.cmu.edu"> CONTACT </a>
     </div>
   </nav>
 
   <!--Main Image-->
+  <!--Scroll or click-->
   <div class="comic" onclick="scrollToOpacity()"> 
-    <img class="slide-img" src="img/left-comic.png" alt="left of UX cat comic" draggable="false">
-    <img class="slide-img" src="img/right-comic.png" alt="right of UX cat comic" draggable="false">
+    <img class="slide-img" src="assets/img/left-comic.png" alt="left of UX cat comic" draggable="false">
+    <img class="slide-img" src="assets/img/right-comic.png" alt="right of UX cat comic" draggable="false">
   </div>
 
-  <div id="intro">
-    <h2>Hi! I’m Yuki, a <span class="gray">storyteller</span> and <span class="gray">product designer</span></h2>
-    <h2>I am dedicated to creating meaningful digital experiences</h2>
+  <!--Short intro about myself-->
+  <div id="intro" class="animate__animated">
+    <h1>Hi! I’m Yuki, a <span class="gray">storyteller</span> and <span class="gray">product designer</span></h1>
+    <h1>I am dedicated to creating meaningful digital experiences</h1>
     <br>
+    <!--Click down button to go to next section-->
     <div id="scroll-project" onclick="scrollToProject()">
       <p class="gray"> View my work below </p>
       <br> 
-      <img src="img/down-arrow.png" alt="down-arrow" height="24px">
+      <img src="assets/img/down-arrow.png" alt="down-arrow" height="24px">
     </div>
   </div>
 
+  
+  <!--List of all my work-->
+  <!--Hover for color-->
   <div id="work">
-    <a href="https://medium.com/@yukic/revamping-post-order-ratings-experience-for-ubereats-new-verticals-orders-008550c3af44" target="_blank"> <img src="img/uber.png" alt="uber-eats" class="project-cover"> </a>
-    <a href="https://medium.com/@yukic/reimagining-the-instacart-experience-e6e1deb895e7" target="_blank"> <img src="img/instacart.png" alt="instacart" class="project-cover"> </a>
-    <a href="https://medium.com/@yukic/digitally-documenting-the-stories-of-italian-fig-trees-4b1a6b80c1c7" target="_blank"> <img src="img/TIGP.png" alt="the-italian-garden-project" class="project-cover"> </a>
-    <a> <img src="img/riot.png" alt="riot-games" class="project-cover"> </a>
-    <a href="https://medium.com/@yukic/outside-of-work-you-can-find-me-f0f50b03bac5" target="_blank"> <img src="img/playground.png" alt="view my design playground" class="project-cover"> </a>
+    <a href="projects/uber.html"> <img src="assets/img/uber.png" alt="uber-eats" class="project-cover"> </a>
+    <a href="https://medium.com/@yukic/reimagining-the-instacart-experience-e6e1deb895e7" target="_blank"> <img src="assets/img/instacart.png" alt="instacart" class="project-cover"> </a>
+    <a href="https://medium.com/@yukic/digitally-documenting-the-stories-of-italian-fig-trees-4b1a6b80c1c7" target="_blank"> <img src="assets/img/TIGP.png" alt="the-italian-garden-project" class="project-cover"> </a>
+    <a href="https://medium.com/@yukic/outside-of-work-you-can-find-me-f0f50b03bac5" target="_blank"> <img src="assets/img/playground.png" alt="view my design playground" class="project-cover"> </a>
   </div>
 
-  <!--Modal-->
+  <!--Scroll top button that appears halfway through the page-->
+  <button id="scroll-top-btn">
+    <img src="assets/img/top-arrow.png" alt="scroll to top" height="24px">
+  </button>
+  
+  <!--Modal shows when in portrait mode-->
+  <!--Prompts you to rotate your device-->
   <div id="overlay"></div>
   <div id="rotateModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <iframe src="https://giphy.com/embed/JOtdkVKp0q8tJ0DGyJ" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <a href="https://giphy.com/stickers/mobile-black-rotatescreen-JOtdkVKp0q8tJ0DGyJ"> </a>
-      <h2>ROTATE</h2>
+      <iframe src="https://giphy.com/embed/JOtdkVKp0q8tJ0DGyJ" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <a href="https://giphy.com/stickers/mobile-black-rotatescreen-JOtdkVKp0q8tJ0DGyJ"> <h1>ROTATE</h1> </a>
       <p>This website is best viewed on a computer. Please rotate for optimal experience.</p>
       <button id="okBtn">OK</button>
     </div>
   </div>
 
   <!--JavaScript-->
-  <script src="script.js"> </script>
-
+  <script src="javascript/script.js"> </script>
+  <script src="javascript/home.js"> </script>
 </body>
 </html>
