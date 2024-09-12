@@ -7,7 +7,7 @@ function checkPassword() {
   
         // Open the link in a new tab
         var link = "https://medium.com/@yukic/revamping-post-order-ratings-experience-for-ubereats-new-verticals-orders-008550c3af44";
-        window.open(link, "_blank");
+        window.open(link);
     } 
     // Alert if password is wrong
     else {
