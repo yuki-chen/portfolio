@@ -1,7 +1,7 @@
 // Input password and open link if correct
 function checkPassword() {
     var password = document.getElementById("password").value;
-    if (password === "55609") {
+    if (password === "oreocookie") {
         document.getElementById("protected").style.display = "none";
         document.getElementById("content").style.display = "block";
   
